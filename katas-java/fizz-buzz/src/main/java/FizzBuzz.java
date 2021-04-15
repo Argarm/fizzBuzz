@@ -27,9 +27,14 @@ public class FizzBuzz {
         return currentValue;
     }
 
-    private static String getFizz(int value){
-        return value % 3 == 0 ? FIZZ : "";
+    private static String getFizz(Integer value){
+        if(value % 3 == 0 || value.toString().contains("3")){
+            return FIZZ;
+        }
+        return "";
     }
+
+
     private static String getBuzz(int value){
         return value % 5 == 0 ? BUZZ : "";
     }
