@@ -68,4 +68,13 @@ public class FizzBuzzTest {
         assertEquals("Buzz",fizzBuzzValues.get(51));
     }
 
+    @Test
+    public void ifNumberHasThreeOrFiveOnItReturnFizz(){
+        fizzBuzzValues = FizzBuzz.start();
+
+        assertEquals("FizzBuzz",fizzBuzzValues.get(34));
+        assertEquals("FizzBuzz",fizzBuzzValues.get(52));
+    }
+
+
 }
