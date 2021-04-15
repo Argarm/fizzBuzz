@@ -10,7 +10,8 @@ public class FizzBuzzTest {
 
     @BeforeEach
     public void setUp() {
-        fizzBuzzValues = FizzBuzz.start();
+
+        fizzBuzzValues = new ArrayList<String>();
     }
 
     @Test
@@ -33,5 +34,29 @@ public class FizzBuzzTest {
         fizzBuzzValues = FizzBuzz.start();
 
         assertEquals(fizzBuzzValues.get(2), FizzBuzz.FIZZ);
+    }
+
+    @Test
+    public void given_multipleOfFive_returnBuzz(){
+        fizzBuzzValues = FizzBuzz.start();
+
+        assertEquals(fizzBuzzValues.get(4),FizzBuzz.BUZZ);
+    }
+
+    @Test
+    public void given_multipleOfThreeAndFive_returnFizzBuzz(){
+        fizzBuzzValues = FizzBuzz.start();
+
+        assertEquals("FizzBuzz",fizzBuzzValues.get(14));
+    }
+
+    @Test
+    public void ifNumberHasThreeOnItReturnFizz(){
+        fizzBuzzValues = FizzBuzz.start();
+
+        assertEquals("Fizz",fizzBuzzValues.get(12));
+        assertEquals("Fizz",fizzBuzzValues.get(31));
+        assertEquals("Fizz",fizzBuzzValues.get(32));
+
     }
 }
