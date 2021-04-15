@@ -35,7 +35,10 @@ public class FizzBuzz {
     }
 
 
-    private static String getBuzz(int value){
-        return value % 5 == 0 ? BUZZ : "";
+    private static String getBuzz(Integer value){
+        if(value % 5 == 0 || value.toString().contains("5")){
+            return BUZZ;
+        }
+        return "";
     }
 }
