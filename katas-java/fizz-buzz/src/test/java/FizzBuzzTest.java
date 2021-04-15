@@ -60,11 +60,12 @@ public class FizzBuzzTest {
     }
 
     @Test
-    public void ifNumberHasThreeOrFiveOnItReturnFizz(){
+    public void ifNumberHasFiveOnItReturnFizz(){
         fizzBuzzValues = FizzBuzz.start();
 
         assertEquals("Buzz",fizzBuzzValues.get(64));
         assertEquals("Buzz",fizzBuzzValues.get(84));
         assertEquals("Buzz",fizzBuzzValues.get(51));
     }
+
 }
